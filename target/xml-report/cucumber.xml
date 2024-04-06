@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.071" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Kullanıcı Skoda sitesine gider header bölümündeki iki ögelenin görünürlüğünü test eder," name="Kullanıcı Modelleri inceler ve test eder" time="5.919">
+<system-out><![CDATA[
+* Kullanıcı "https://www.skoda.com.tr/" adresli sayfaya gider...............passed
+* Kullanıcı "Modeller" tıklar...............................................passed
+* Kullanıcı "Škoda Kodiaq" "Škoda Fabia" "Škoda Superb" göründüğünü test eder.passed
+* Kullanıcı sayfayı kapatır.................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
