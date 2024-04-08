@@ -16,6 +16,25 @@ Feature: Kullanıcı Skoda sitesine gider header bölümündeki iki ögelenin g�
     * Kullanıcı "Škoda Kodiaq" "Škoda Fabia" "Škoda Superb" göründüğünü test eder
     * Kullanıcı sayfayı kapatır
 
+  Scenario: Kullanıcı satış iletişim formunu doldurur
+    *  Kullanıcı "https://www.skoda.com.tr/" adresli sayfaya gider
+    *  Kullanıcı "Kabul Et" tıklar
+    *  Kullanıcı "Satış İletişim Formu" tıklar
+    *  Kullanıcı "Škoda Modeli" tıklar
+    *  Kullanıcı "Škoda Fabia" tıklar
+    *  Kullanıcı "Tercih Edilen Bölge" tıklar
+    *  Kullanıcı "Ege" tıklar
+    *  Kullanıcı "Kullandığınız Otomobil Markası" tıklar
+    *  Kullanıcı "Dacia" tıklar
+    *  Kullanıcı tarih seçer
+    *  Kullanıcı "Yetkili Satıcı" tıklar
+    *  Kullanıcı "Lena Otomotiv - Aydın" tıklar
+    *  Kullanıcı "Araç Değişimi için Tarih Seçiniz" tıklar
+    *  Kullanıcı "6 ay içinde" tıklar
+
+
+
+
 
 
 

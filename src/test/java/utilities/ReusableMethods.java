@@ -170,8 +170,9 @@ public class ReusableMethods {
 
     }
 
-    public static void textIleIsDisplay(String text) {
+    public static boolean textIleIsDisplay(String text) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + text + "']")).isDisplayed();
+        return false;
     }
 
     public static void loginPage(WebElement emailButton, String string, WebElement passwordButtonLogin, String string2) {
@@ -186,7 +187,7 @@ public class ReusableMethods {
         }
 
     public static void xpathIleClick(String ogeler) {
-        SkodaPage hepsiBPage = new SkodaPage();
+        SkodaPage skodaPage = new SkodaPage();
        Driver.getDriver().findElement(By.name(ogeler)).click();
     }
 

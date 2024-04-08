@@ -1,7 +1,9 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import org.junit.Assert;
 import pages.Base;
+import pages.SkodaPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -10,6 +12,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SkodaStepdefinitions extends Base {
+
+    SkodaPage skodaPage=new SkodaPage();
 
 
     @Given("Kullanıcı {string} adresli sayfaya gider")
@@ -22,13 +26,14 @@ public class SkodaStepdefinitions extends Base {
     @Given("Kullanıcı {string} tıklar")
     public void kullanıcıTıklar(String text) {
         ReusableMethods.textIleClick(text);
+        ReusableMethods.bekle(2);
 
     }
 
     @Given("Kullanıcı {string} {string} göründüğünü test eder")
     public void kullanıcıGöründüğünüTestEder(String oge, String oge2) {
-        ReusableMethods.textIleIsDisplay(oge);
-        ReusableMethods.textIleIsDisplay(oge2);
+        Assert.assertTrue(ReusableMethods.textIleIsDisplay(oge));
+        Assert.assertTrue(ReusableMethods.textIleIsDisplay(oge2));;
     }
 
     @Given("Kullanıcı sayfayı kapatır")
@@ -39,7 +44,8 @@ public class SkodaStepdefinitions extends Base {
 
     @Given("Kullanıcı {string} göründüğünü test eder")
     public void kullanıcı_göründüğünü_test_eder(String skoda) {
-        ReusableMethods.textIleIsDisplay(skoda);
+
+        Assert.assertTrue(ReusableMethods.textIleIsDisplay(skoda));;
     }
 
 
@@ -50,12 +56,20 @@ public class SkodaStepdefinitions extends Base {
         ogele.add(string3);
         ogele.add(string2);
             for (int i = 0; i < ogele.size(); i++) {
-                ReusableMethods.textIleIsDisplay(ogele.get(i));
+                Assert.assertTrue(ReusableMethods.textIleIsDisplay(ogele.get(i)));;
             }
 
 
 
     }
+
+    @Given("Kullanıcı tarih seçer")
+    public void kullanıcı_tarih_seçer() {
+        skodaPage.tarihSimgesi.click();
+        skodaPage.sagOkTusu.click();
+        ReusableMethods.textIleClick(String.valueOf(8));
+    }
+
 }
 
 
